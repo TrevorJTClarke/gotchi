@@ -1,0 +1,1148 @@
+{
+  "contractName": "GotchiEvents",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_gotchiOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_gotchiId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_gotchiUuid",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_gotchiContract",
+          "type": "address"
+        }
+      ],
+      "name": "GotchiStarted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_gotchiOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_gotchiId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_totalGames",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_totalFood",
+          "type": "uint256"
+        }
+      ],
+      "name": "GotchiProgress",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_gotchiId",
+          "type": "uint256"
+        }
+      ],
+      "name": "GotchiDied",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_gotchiId",
+          "type": "uint256"
+        }
+      ],
+      "name": "GotchiCured",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_gotchiOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_gotchiId",
+          "type": "uint256"
+        }
+      ],
+      "name": "GotchiImmortalized",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820849cc029f42222534f4fabad7fe10389f7a63d10a29e8b4110c64ce54e3e4fc10029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820849cc029f42222534f4fabad7fe10389f7a63d10a29e8b4110c64ce54e3e4fc10029",
+  "sourceMap": "207:502:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;207:502:3;;;;;;;",
+  "deployedSourceMap": "207:502:3:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\n/**\n * @title GotchiData\n * @author Trevor Clarke (github.com/trevorjtclarke)\n * @dev This contract contains all the event definitions,\n *      allowing easier event management\n */\ncontract GotchiEvents {\n  event Deposit(address indexed _from, uint value);\n  event GotchiStarted(address indexed _gotchiOwner, uint256 indexed _gotchiId, uint _gotchiUuid, address _gotchiContract);\n  event GotchiProgress(address indexed _gotchiOwner, uint256 indexed _gotchiId, uint256 _totalGames, uint256 _totalFood);\n  event GotchiDied(uint256 indexed _gotchiId);\n  event GotchiCured(uint256 indexed _gotchiId);\n  event GotchiImmortalized(address indexed _gotchiOwner, uint256 indexed _gotchiId);\n}\n",
+  "sourcePath": "/mnt/c/Users/Bradley/broceliande/gotchi/contracts/GotchiEvents.sol",
+  "ast": {
+    "absolutePath": "/mnt/c/Users/Bradley/broceliande/gotchi/contracts/GotchiEvents.sol",
+    "exportedSymbols": {
+      "GotchiEvents": [
+        920
+      ]
+    },
+    "id": 921,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 879,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title GotchiData\n@author Trevor Clarke (github.com/trevorjtclarke)\n@dev This contract contains all the event definitions,\n     allowing easier event management",
+        "fullyImplemented": true,
+        "id": 920,
+        "linearizedBaseContracts": [
+          920
+        ],
+        "name": "GotchiEvents",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 885,
+            "name": "Deposit",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 881,
+                  "indexed": true,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 885,
+                  "src": "247:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 880,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 883,
+                  "indexed": false,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 885,
+                  "src": "270:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 882,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "270:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:35:3"
+            },
+            "src": "233:49:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 895,
+            "name": "GotchiStarted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 887,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "305:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 889,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "335:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "335:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 891,
+                  "indexed": false,
+                  "name": "_gotchiUuid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "362:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 890,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "362:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 893,
+                  "indexed": false,
+                  "name": "_gotchiContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "380:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:100:3"
+            },
+            "src": "285:120:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 905,
+            "name": "GotchiProgress",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 897,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "429:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 896,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 899,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "459:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 901,
+                  "indexed": false,
+                  "name": "_totalGames",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "486:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 900,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 903,
+                  "indexed": false,
+                  "name": "_totalFood",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "507:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 902,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:98:3"
+            },
+            "src": "408:119:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 909,
+            "name": "GotchiDied",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 908,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 909,
+                  "src": "547:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:27:3"
+            },
+            "src": "530:44:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 913,
+            "name": "GotchiCured",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 911,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 913,
+                  "src": "595:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 910,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "595:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:27:3"
+            },
+            "src": "577:45:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 919,
+            "name": "GotchiImmortalized",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 915,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "650:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 914,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "650:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 917,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "680:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "680:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "649:57:3"
+            },
+            "src": "625:82:3"
+          }
+        ],
+        "scope": 921,
+        "src": "207:502:3"
+      }
+    ],
+    "src": "0:710:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/mnt/c/Users/Bradley/broceliande/gotchi/contracts/GotchiEvents.sol",
+    "exportedSymbols": {
+      "GotchiEvents": [
+        920
+      ]
+    },
+    "id": 921,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 879,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title GotchiData\n@author Trevor Clarke (github.com/trevorjtclarke)\n@dev This contract contains all the event definitions,\n     allowing easier event management",
+        "fullyImplemented": true,
+        "id": 920,
+        "linearizedBaseContracts": [
+          920
+        ],
+        "name": "GotchiEvents",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 885,
+            "name": "Deposit",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 884,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 881,
+                  "indexed": true,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 885,
+                  "src": "247:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 880,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 883,
+                  "indexed": false,
+                  "name": "value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 885,
+                  "src": "270:10:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 882,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "270:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:35:3"
+            },
+            "src": "233:49:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 895,
+            "name": "GotchiStarted",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 894,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 887,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "305:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "305:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 889,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "335:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "335:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 891,
+                  "indexed": false,
+                  "name": "_gotchiUuid",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "362:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 890,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "362:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 893,
+                  "indexed": false,
+                  "name": "_gotchiContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 895,
+                  "src": "380:23:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "304:100:3"
+            },
+            "src": "285:120:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 905,
+            "name": "GotchiProgress",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 897,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "429:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 896,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 899,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "459:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "459:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 901,
+                  "indexed": false,
+                  "name": "_totalGames",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "486:19:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 900,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 903,
+                  "indexed": false,
+                  "name": "_totalFood",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 905,
+                  "src": "507:18:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 902,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "428:98:3"
+            },
+            "src": "408:119:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 909,
+            "name": "GotchiDied",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 908,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 907,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 909,
+                  "src": "547:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 906,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:27:3"
+            },
+            "src": "530:44:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 913,
+            "name": "GotchiCured",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 912,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 911,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 913,
+                  "src": "595:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 910,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "595:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:27:3"
+            },
+            "src": "577:45:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 919,
+            "name": "GotchiImmortalized",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 915,
+                  "indexed": true,
+                  "name": "_gotchiOwner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "650:28:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 914,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "650:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 917,
+                  "indexed": true,
+                  "name": "_gotchiId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 919,
+                  "src": "680:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "680:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "649:57:3"
+            },
+            "src": "625:82:3"
+          }
+        ],
+        "scope": 921,
+        "src": "207:502:3"
+      }
+    ],
+    "src": "0:710:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-12-13T23:52:55.708Z"
+}

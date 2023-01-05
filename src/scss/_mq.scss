@@ -1,0 +1,15 @@
+@mixin bp($point) {
+  $bp-mobile: "(max-width: 600px)";
+  $bp-tablet: "(max-width: 1250px)";
+  $bp-desktop: "(max-width: 1600px)";
+
+  @if $point == mobile {
+    @media #{$bp-mobile} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$bp-tablet} { @content; }
+  }
+  @else if $point == desktop {
+    @media #{$bp-desktop}  { @content; }
+  }
+}
